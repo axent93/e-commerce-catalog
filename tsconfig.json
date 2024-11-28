@@ -13,6 +13,6 @@
   "include": [
     "jest.config.js",
     "lint-staged.config.js",
-    "commitlint.config.js"
+    "commitlint.config.cjs"
   ],
 }
