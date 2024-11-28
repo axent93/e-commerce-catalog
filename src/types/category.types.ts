@@ -1,4 +1,1 @@
-export interface ICategory {
-  categoryId: string
-  name: string
-}
+export type ICategory = string

@@ -12,5 +12,5 @@
   "htmlWhitespaceSensitivity": "css",
   "endOfLine": "auto",
   "singleAttributePerLine": true,
-  "printWidth": 130
+  "printWidth": 100
 }

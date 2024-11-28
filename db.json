@@ -12,8 +12,7 @@
       "reviewsCount": 120,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product1_img1.jpg",
-        "https://example.com/images/product1_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "audio",
@@ -35,8 +34,7 @@
       "reviewsCount": 250,
       "availability": "Out of Stock",
       "images": [
-        "https://example.com/images/product2_img1.jpg",
-        "https://example.com/images/product2_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "mobile",
@@ -58,8 +56,7 @@
       "reviewsCount": 180,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product3_img1.jpg",
-        "https://example.com/images/product3_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "computer",
@@ -81,8 +78,7 @@
       "reviewsCount": 300,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product4_img1.jpg",
-        "https://example.com/images/product4_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "wearable",
@@ -104,8 +100,7 @@
       "reviewsCount": 150,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product5_img1.jpg",
-        "https://example.com/images/product5_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "tablet",
@@ -127,8 +122,7 @@
       "reviewsCount": 200,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product6_img1.jpg",
-        "https://example.com/images/product6_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "audio",
@@ -150,8 +144,7 @@
       "reviewsCount": 500,
       "availability": "Out of Stock",
       "images": [
-        "https://example.com/images/product7_img1.jpg",
-        "https://example.com/images/product7_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "gaming",
@@ -173,8 +166,7 @@
       "reviewsCount": 220,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product8_img1.jpg",
-        "https://example.com/images/product8_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "camera",
@@ -196,8 +188,7 @@
       "reviewsCount": 180,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product9_img1.jpg",
-        "https://example.com/images/product9_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "wearable",
@@ -219,8 +210,7 @@
       "reviewsCount": 140,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product10_img1.jpg",
-        "https://example.com/images/product10_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "tablet",
@@ -242,8 +232,7 @@
       "reviewsCount": 160,
       "availability": "Out of Stock",
       "images": [
-        "https://example.com/images/product11_img1.jpg",
-        "https://example.com/images/product11_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "smart home",
@@ -265,8 +254,7 @@
       "reviewsCount": 110,
       "availability": "In Stock",
       "images": [
-        "https://example.com/images/product12_img1.jpg",
-        "https://example.com/images/product12_img2.jpg"
+        "/images/product.webp"
       ],
       "tags": [
         "charger",
@@ -278,45 +266,15 @@
     }
   ],
   "categories": [
-    {
-      "categoryId": "1",
-      "name": "Electronics"
-    },
-    {
-      "categoryId": "2",
-      "name": "Computers"
-    },
-    {
-      "categoryId": "3",
-      "name": "Wearables"
-    },
-    {
-      "categoryId": "4",
-      "name": "Tablets"
-    },
-    {
-      "categoryId": "5",
-      "name": "Audio"
-    },
-    {
-      "categoryId": "6",
-      "name": "Gaming"
-    },
-    {
-      "categoryId": "7",
-      "name": "Cameras"
-    },
-    {
-      "categoryId": "8",
-      "name": "Fitness"
-    },
-    {
-      "categoryId": "9",
-      "name": "Smart Home"
-    },
-    {
-      "categoryId": "10",
-      "name": "Accessories"
-    }
+    "Electronics",
+    "Computers",
+    "Wearables",
+    "Tablets",
+    "Audio",
+    "Gaming",
+    "Cameras",
+    "Fitness",
+    "Smart Home",
+    "Accessories"
   ]
 }

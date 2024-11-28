@@ -1,0 +1,19 @@
+.categories-container {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  min-width: 200px;
+
+  & .categories-container__heading {
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  & .categories-container__list {
+    list-style-type: none;
+    padding: 0;
+
+    & .categories-container__list--item {
+      margin-bottom: 1rem;
+    }
+  }
+}
