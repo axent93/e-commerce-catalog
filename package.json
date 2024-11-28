@@ -2,6 +2,10 @@
   "name": "e-commerce-catalog",
   "private": true,
   "version": "0.0.0",
+  "author": {
+    "name": "Milos Aksentijevic",
+    "email": "axent93@hotmail.com"
+  },
   "type": "module",
   "scripts": {
     "vite": "vite",
@@ -10,10 +14,12 @@
     "test": "jest",
     "preview": "vite preview",
     "dev": "concurrently \"npm run vite\" \"npm run start:json-server\"",
-    "start:json-server": "json-server --watch db.json --port 5000",
+    "start:json-server": "json-server --watch db.json --no-cors --routes routes.json",
     "prepare": "husky"
   },
   "dependencies": {
+    "axios": "^1.7.8",
+    "json-server": "0.17.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -39,7 +45,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "json-server": "^0.16.3",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
     "ts-jest": "^29.2.5",

@@ -8,9 +8,12 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      devOptions: {
+        enabled: true
+      },
       manifest: {
-        name: 'My React App',
-        short_name: 'ReactApp',
+        name: 'E-commerce catalog',
+        short_name: 'EComCatalog',
         description: 'A React application',
         theme_color: '#ffffff',
         icons: [

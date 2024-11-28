@@ -33,7 +33,7 @@
       "brand": "Samsung",
       "rating": 4.7,
       "reviewsCount": 250,
-      "availability": "In Stock",
+      "availability": "Out of Stock",
       "images": [
         "https://example.com/images/product2_img1.jpg",
         "https://example.com/images/product2_img2.jpg"
@@ -148,7 +148,7 @@
       "brand": "Sony",
       "rating": 4.9,
       "reviewsCount": 500,
-      "availability": "In Stock",
+      "availability": "Out of Stock",
       "images": [
         "https://example.com/images/product7_img1.jpg",
         "https://example.com/images/product7_img2.jpg"
@@ -240,7 +240,7 @@
       "brand": "Nest",
       "rating": 4.7,
       "reviewsCount": 160,
-      "availability": "In Stock",
+      "availability": "Out of Stock",
       "images": [
         "https://example.com/images/product11_img1.jpg",
         "https://example.com/images/product11_img2.jpg"
