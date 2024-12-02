@@ -7,6 +7,9 @@
     "email": "axent93@hotmail.com"
   },
   "type": "module",
+  "engines": {
+    "node": ">=18 <=20"
+  },
   "scripts": {
     "vite": "vite",
     "build": "tsc -b && vite build",
