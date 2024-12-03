@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
+import EnvironmentPlugin from 'vite-plugin-environment'
 import { VitePWA } from 'vite-plugin-pwa'
 
 const apiUrl = process.env.VITE_APP_API_URL || 'http://localhost:5000/api'
@@ -7,6 +8,7 @@ const apiUrl = process.env.VITE_APP_API_URL || 'http://localhost:5000/api'
 export default defineConfig({
   plugins: [
     react(),
+    EnvironmentPlugin('all'),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],

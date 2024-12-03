@@ -4,12 +4,15 @@ import './CategoryItem.css' // Import the CSS for styling
 interface CategoryItemProps {
   checked: boolean
   onChange: (checked: boolean) => void
-  label?: string // Optional label for the checkbox
+  label?: string
 }
 
 const CategoryItem: React.FC<CategoryItemProps> = ({ checked, onChange, label }) => {
+  /**
+   * Handle checkbox checked state
+   */
   const handleCheckboxChange = () => {
-    onChange(!checked) // Toggle the checked state
+    onChange(!checked)
   }
 
   return (

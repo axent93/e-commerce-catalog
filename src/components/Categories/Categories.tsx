@@ -2,8 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 import { forwardRef, useEffect } from 'react'
 import { getCategories } from '../../services/categories.service'
 import { ICategory } from '../../types/category.types'
+import CategoriesList from '../CategoriesList/CategoriesList'
 import CloseIcon from '../icons/CloseIcon'
-import RenderCategories from '../RenderCategoriesList/RenderCategoriesList'
 import './Categories.css'
 
 interface ICategoriesProps {
@@ -19,16 +19,23 @@ const Categories = forwardRef<HTMLDivElement, ICategoriesProps>((props, ref) => 
   const storedProducts = localStorage.getItem('categories')
   const initialData = storedProducts ? JSON.parse(storedProducts) : undefined
 
+  /**
+   * Categories Query
+   * @returns {ICategory[]}
+   */
   const { data, isLoading, isFetching, isError, isSuccess } = useQuery<ICategory[]>({
     queryKey: ['categories'],
     initialData,
     queryFn: getCategories,
     retry: 5,
-    staleTime: 5 * 60 * 1000,
-    refetchOnReconnect: true,
+    staleTime: 5 * 60 * 1000, // 5 minutes cache time
+    refetchOnReconnect: true, // Refetch when network is back
     placeholderData: initialData || undefined
   })
 
+  /**
+   * Save categories to local storage when data is updated. This helps offline support
+   */
   useEffect(() => {
     if (data && data.length) {
       localStorage.setItem('categories', JSON.stringify(data))
@@ -45,6 +52,7 @@ const Categories = forwardRef<HTMLDivElement, ICategoriesProps>((props, ref) => 
       <header className='categories-container__header'>
         <h2>Categories</h2>
         <button
+          aria-label='close'
           onClick={handleCategoriesToggle}
           className='categories-container__header--filter'
         >
@@ -60,7 +68,7 @@ const Categories = forwardRef<HTMLDivElement, ICategoriesProps>((props, ref) => 
             ></p>
           ))
         ) : (
-          <RenderCategories
+          <CategoriesList
             data={data}
             selectedCategories={selectedCategories}
             handleCategorySelection={handleCategorySelection}

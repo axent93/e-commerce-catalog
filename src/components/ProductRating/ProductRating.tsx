@@ -4,11 +4,10 @@ import './ProductRating.css'
 type TRatingProps = {
   value: number
 }
+const stars = Array.from(Array(5).keys())
 
 const ProductRating: React.FC<TRatingProps> = props => {
   const { value } = props
-
-  const stars = [0, 1, 2, 3, 4, 5]
 
   return (
     <div className='product-rating__container'>

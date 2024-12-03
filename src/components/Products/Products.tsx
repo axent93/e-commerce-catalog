@@ -18,22 +18,33 @@ const Products: React.FC<IProductsProps> = props => {
   const storedProducts = localStorage.getItem('products')
   const initialData = storedProducts ? JSON.parse(storedProducts) : undefined
 
+  /**
+   * Products query
+   * @returns {IProduct[]}
+   */
   const { data, isLoading, isFetching, isError, isSuccess } = useQuery<IProduct[]>({
     queryKey: ['products'],
     initialData,
     queryFn: getProducts,
-    staleTime: 5 * 60 * 1000,
+    staleTime: 5 * 60 * 1000, // 5 minutes cache time
     retry: 5,
-    refetchOnReconnect: true,
+    refetchOnReconnect: true, // Refetch when network is back
     placeholderData: initialData || undefined
   })
 
+  /**
+   * Save products to local storage when data is updated. This helps offline support
+   */
   useEffect(() => {
     if (data && data.length) {
       localStorage.setItem('products', JSON.stringify(data))
     }
   }, [data])
 
+  /**
+   * Optimized Filter products based on selected categories
+   * @returns {IProduct[]}
+   */
   const filteredData = useMemo(() => {
     if (!data) return []
     if (!selectedCategories.length) return data

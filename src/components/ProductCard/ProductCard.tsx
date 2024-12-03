@@ -25,10 +25,18 @@ const ProductCard: ProductCardComponent = props => {
 
   const [hasError, setHasError] = useState<boolean>(false)
 
+  /**
+   * After image is loaded perform a fade in effect
+   * @param event SyntheticEvent<HTMLImageElement>
+   */
   const onLoadHandler = (event: SyntheticEvent<HTMLImageElement>): void => {
     event.currentTarget.style.opacity = '1'
   }
 
+  /**
+   * Triggers when image fails to load, setting placeholder to be rendered
+   * @param _ SyntheticEvent<HTMLImageElement>
+   */
   const onErrorHandler = (_: SyntheticEvent<HTMLImageElement>): void => {
     setHasError(true)
   }
@@ -95,7 +103,6 @@ const Skeleton: React.FC = () => {
         className='skeleton image'
         viewBox='0 0 400 400'
       />
-
       <p className='skeleton medium'></p>
       <p className='skeleton small'></p>
       <p className='skeleton large'></p>

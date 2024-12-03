@@ -10,6 +10,9 @@ export default function App() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const categoriesRef = useRef<HTMLDivElement | null>(null)
 
+  /**
+   * Handle category selection
+   */
   const handleCategorySelection = useCallback(
     (categoryId: string) => {
       setSelectedCategories(prevSelectedCategories =>
@@ -21,6 +24,9 @@ export default function App() {
     [selectedCategories]
   )
 
+  /**
+   * Handle categories section toggle on mobile devices
+   */
   const handleCategoriesToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
     if (!categoriesRef.current) return

@@ -1,6 +1,6 @@
 import { ISVGProps } from '../../types/common.types'
 
-const CloseIcon: React.FC<ISVGProps> = ({ className }) => {
+const StarIcon: React.FC<ISVGProps> = ({ className }) => {
   return (
     <svg
       className={className}
@@ -19,4 +19,4 @@ const CloseIcon: React.FC<ISVGProps> = ({ className }) => {
   )
 }
 
-export default CloseIcon
+export default StarIcon

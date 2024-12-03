@@ -5,7 +5,7 @@
   gap: 8px;
 
   input[type='checkbox'] {
-    display: none; /* Hide the default checkbox */
+    display: none;
   }
 
   .category-item--mark {

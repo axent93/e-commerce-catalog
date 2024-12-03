@@ -8,7 +8,7 @@ interface IRenderCategoriesProps {
   handleCategorySelection: (categoryName: string) => void
 }
 
-const RenderCategories = memo(
+const CategoriesList = memo(
   ({ data, selectedCategories, handleCategorySelection }: IRenderCategoriesProps) =>
     data.map((category, index) => (
       <li
@@ -24,6 +24,6 @@ const RenderCategories = memo(
     ))
 )
 
-RenderCategories.displayName = 'RenderCategories'
+CategoriesList.displayName = 'RenderCategories'
 
-export default RenderCategories
+export default CategoriesList
