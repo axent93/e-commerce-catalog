@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { useCallback, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 import Categories from './components/Categories/Categories'
 import Products from './components/Products/Products'
