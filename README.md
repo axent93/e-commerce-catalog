@@ -30,7 +30,7 @@ For more details on the concept of the solution, please refer to the [Concept of
 
 Make sure you have the following installed:
 
-- Node.js (version 16+ recommended)
+- Node.js (version 18+ recommended)
 - npm or yarn
 
 ### Installation
