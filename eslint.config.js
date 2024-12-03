@@ -29,7 +29,7 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'react/prop-types': 'off',
       'no-debugger': 'warn',
-      'typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
       'prettier/prettier': [
         'error',
         {

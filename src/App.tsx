@@ -13,16 +13,13 @@ export default function App() {
   /**
    * Handle category selection
    */
-  const handleCategorySelection = useCallback(
-    (categoryId: string) => {
-      setSelectedCategories(prevSelectedCategories =>
-        prevSelectedCategories.includes(categoryId)
-          ? prevSelectedCategories.filter(id => id !== categoryId)
-          : [...prevSelectedCategories, categoryId]
-      )
-    },
-    [selectedCategories]
-  )
+  const handleCategorySelection = (categoryId: string) => {
+    setSelectedCategories(prevSelectedCategories =>
+      prevSelectedCategories.includes(categoryId)
+        ? prevSelectedCategories.filter(id => id !== categoryId)
+        : [...prevSelectedCategories, categoryId]
+    )
+  }
 
   /**
    * Handle categories section toggle on mobile devices

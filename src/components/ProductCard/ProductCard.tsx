@@ -37,7 +37,7 @@ const ProductCard: ProductCardComponent = props => {
    * Triggers when image fails to load, setting placeholder to be rendered
    * @param _ SyntheticEvent<HTMLImageElement>
    */
-  const onErrorHandler = (_: SyntheticEvent<HTMLImageElement>): void => {
+  const onErrorHandler = (): void => {
     setHasError(true)
   }
 
