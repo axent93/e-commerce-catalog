@@ -6,13 +6,13 @@
       "description": "Noise canceling over-ear headphones with 30-hour battery life.",
       "price": 199.99,
       "currency": "USD",
-      "category": "Electronics",
+      "category": "Audio",
       "brand": "Jabra",
       "rating": 4.5,
       "reviewsCount": 120,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/headphones.webp"
       ],
       "tags": [
         "audio",
@@ -34,7 +34,7 @@
       "reviewsCount": 250,
       "availability": "Out of Stock",
       "images": [
-        "/images/product.webp"
+        "/images/smartphone.webp"
       ],
       "tags": [
         "mobile",
@@ -52,11 +52,11 @@
       "currency": "USD",
       "category": "Computers",
       "brand": "Dell",
-      "rating": 4.6,
+      "rating": 3.6,
       "reviewsCount": 180,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/laptop.webp"
       ],
       "tags": [
         "computer",
@@ -78,7 +78,7 @@
       "reviewsCount": 300,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/watch.webp"
       ],
       "tags": [
         "wearable",
@@ -96,11 +96,11 @@
       "currency": "USD",
       "category": "Tablets",
       "brand": "Amazon",
-      "rating": 4.4,
+      "rating": 2.4,
       "reviewsCount": 150,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/tablet.webp"
       ],
       "tags": [
         "tablet",
@@ -118,11 +118,11 @@
       "currency": "USD",
       "category": "Audio",
       "brand": "Bose",
-      "rating": 4.3,
+      "rating": 1.3,
       "reviewsCount": 200,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/speaker.webp"
       ],
       "tags": [
         "audio",
@@ -144,7 +144,7 @@
       "reviewsCount": 500,
       "availability": "Out of Stock",
       "images": [
-        "/images/product.webp"
+        "/images/console.webp"
       ],
       "tags": [
         "gaming",
@@ -166,7 +166,7 @@
       "reviewsCount": 220,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/camera.webp"
       ],
       "tags": [
         "camera",
@@ -182,13 +182,13 @@
       "description": "Fitness tracker with heart rate monitor and GPS.",
       "price": 149.99,
       "currency": "USD",
-      "category": "Wearables",
+      "category": "Fitness",
       "brand": "Fitbit",
       "rating": 4.2,
       "reviewsCount": 180,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/fitness.webp"
       ],
       "tags": [
         "wearable",
@@ -210,7 +210,7 @@
       "reviewsCount": 140,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/reader.webp"
       ],
       "tags": [
         "tablet",
@@ -232,7 +232,7 @@
       "reviewsCount": 160,
       "availability": "Out of Stock",
       "images": [
-        "/images/product.webp"
+        "/images/thermostat.webp"
       ],
       "tags": [
         "smart home",
@@ -250,11 +250,11 @@
       "currency": "USD",
       "category": "Accessories",
       "brand": "Anker",
-      "rating": 4.4,
+      "rating": 3.4,
       "reviewsCount": 110,
       "availability": "In Stock",
       "images": [
-        "/images/product.webp"
+        "/images/charger.webp"
       ],
       "tags": [
         "charger",

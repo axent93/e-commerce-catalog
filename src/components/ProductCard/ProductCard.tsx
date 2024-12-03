@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { SyntheticEvent, useState } from 'react'
 import { IProduct } from '../../types/product.types'
+import ProductRating from '../ProductRating/ProductRating'
 import './ProductCard.css'
 
 interface ProductCardComponent extends React.FC<IProduct> {
@@ -8,46 +9,101 @@ interface ProductCardComponent extends React.FC<IProduct> {
 
 const ProductCard: ProductCardComponent = props => {
   const {
-    name,
     productId,
-    images,
-    price,
+    name,
     description,
-    category,
-    rating,
+    price,
     currency,
+    category,
     brand,
+    images,
+    rating,
     reviewsCount,
     availability,
     tags
   } = props
 
+  const [hasError, setHasError] = useState<boolean>(false)
+
+  const onLoadHandler = (event: SyntheticEvent<HTMLImageElement>): void => {
+    event.currentTarget.style.opacity = '1'
+  }
+
+  const onErrorHandler = (_: SyntheticEvent<HTMLImageElement>): void => {
+    setHasError(true)
+  }
+
   return (
     <article className='product-card'>
+      <p className='product-card__availability'>
+        <span
+          className={`${availability === 'In Stock' ? 'available' : ''} product-card__availability--indicator`}
+        ></span>
+        {availability}
+      </p>
+      {hasError && (
+        <div className='product-card__image--error'>
+          <svg
+            fill='red'
+            viewBox='0 0 400 400'
+          />
+          <span className='product-card__image--error--message'>Can&apos;t load image</span>
+        </div>
+      )}
       <img
         className='product-card__image'
         width={400}
         height={400}
+        loading='lazy'
         src={images[0]}
+        onLoad={onLoadHandler}
+        onError={onErrorHandler}
         alt={`product-image-${productId}`}
       />
-
       <h3 className='product-card__name'>{name}</h3>
-      <p>{description}</p>
+      <ProductRating value={Math.ceil(rating)} />
+      <p className='product-card__description'>{description}</p>
+      <p className='product-card__category'>
+        <strong>Category: </strong>
+        {category}
+      </p>
+      <p className='product-card__brand'>
+        <strong>Brand: </strong>
+        {brand}
+      </p>
+      <p className='product-card__brand'>
+        <strong>Reviews: </strong>
+        {reviewsCount}
+      </p>
+      <p className='product-card__tags'>
+        {tags.map(tag => (
+          <span key={tag}>#{tag}</span>
+        ))}
+      </p>
+      <p className='product-card__price'>
+        <strong>{price}</strong> {currency}
+      </p>
     </article>
   )
 }
 
 const Skeleton: React.FC = () => {
   return (
-    <article className='product-card'>
+    <article className='product-card--skeleton'>
+      <p className='skeleton small'></p>
       <svg
-        className='skeleton'
+        className='skeleton image'
         viewBox='0 0 400 400'
       />
 
-      <h3 className='product-card__name skeleton'></h3>
-      <p className='skeleton'></p>
+      <p className='skeleton medium'></p>
+      <p className='skeleton small'></p>
+      <p className='skeleton large'></p>
+      <p className='skeleton small'></p>
+      <p className='skeleton small'></p>
+      <p className='skeleton small'></p>
+      <p className='skeleton small'></p>
+      <p className='skeleton large'></p>
     </article>
   )
 }
