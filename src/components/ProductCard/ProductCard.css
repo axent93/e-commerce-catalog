@@ -1,6 +1,6 @@
 .product-card {
   box-shadow: 0 4px 8px var(--shadow-color);
-  border-radius: .3rem;
+  border-radius: var(--base-radius);
   background-color: var(--base-white);
   padding: .5rem;
   position: relative;
@@ -16,12 +16,12 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: red;
+      background-color: var(--base-red);
       display: inline-block;
-      margin-right: 5px;
+      margin-right: .3rem;
 
       &.available {
-        background-color: green;
+        background-color: var(--base-green);
       }
     }
   }
@@ -43,7 +43,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: small;
-      color: red;
+      color: var(--base-red);
     }
   }
 
@@ -80,7 +80,7 @@
     align-items: center;
     margin: 0;
     font-size: small;
-    color: blue;
+    color: var(--base-blue);
     flex-wrap: wrap;
 
     & span {
@@ -91,7 +91,7 @@
 
 .product-card--skeleton {
   box-shadow: 0 4px 8px var(--shadow-color);
-  border-radius: .3rem;
+  border-radius: var(--base-radius);
   background-color: var(--base-white);
   padding: .5rem;
   position: relative;
@@ -105,24 +105,24 @@
   }
 
   svg {
-    border-radius: 5px;
+    border-radius: var(--base-radius);
   }
 
   & .medium {
     margin: 6px 0;
-    height: 24px;
-    border-radius: 5px;
+    height: 1.5rem;
+    border-radius: var(--base-radius);
   }
 
   & .small {
     margin: 3px 0;
-    height: 16px;
-    border-radius: 5px;
+    height: 1rem;
+    border-radius: var(--base-radius);
   }
 
   & .large {
     margin: 10px 0;
-    height: 32px;
-    border-radius: 5px;
+    height: 2rem;
+    border-radius: var(--base-radius);
   }
 }

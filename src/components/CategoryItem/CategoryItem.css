@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  gap: 8px;
+  gap: .5rem;
 
   input[type='checkbox'] {
     display: none;
@@ -12,7 +12,7 @@
     width: 20px;
     height: 20px;
     border: 2px solid var(--heading-bg);
-    border-radius: 4px;
+    border-radius: var(--base-radius);
     background-color: var(--base-white);
     position: relative;
     display: flex;
@@ -41,7 +41,7 @@
   }
 
   .category-item__label {
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-secondary-color);
   }
 }

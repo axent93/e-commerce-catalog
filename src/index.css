@@ -1,9 +1,17 @@
 :root {
+  /* base colors */
   --base-white: #fff;
+  --base-red: #ff0000;
+  --base-blue: #0000ff;
+  --base-green: #008000;
+  --base-orange: #ffa500;
   --section-bg: #e7f6ff;
   --heading-bg: #66c9ff;
   --text-secondary-color: #3d3d3d;
   --shadow-color: #0000001a;
+
+  /* base units */
+  --base-radius: .3rem;
 }
 
 body {

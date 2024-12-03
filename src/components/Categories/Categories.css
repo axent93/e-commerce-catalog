@@ -1,6 +1,6 @@
 .categories-container {
   min-width: 200px;
-  border-radius: 5px;
+  border-radius: var(--base-radius);
   max-height: 100vh;
   overflow-y: auto;
   background: var(--section-bg);
@@ -67,10 +67,10 @@
     }
 
     & .categories-container__list--skeleton {
-      height: 25px;
+      height: 1.5rem;
       margin: 0;
-      margin-bottom: 16px;
-      border-radius: 5px;
+      margin-bottom: 1rem;
+      border-radius: var(--base-radius);
     }
   }
 }

@@ -10,7 +10,7 @@
     fill: var(--text-secondary-color);
 
     &.filled {
-      fill: orange;
+      fill: var(--base-orange);
     }
   }
 }

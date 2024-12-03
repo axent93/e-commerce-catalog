@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import EnvironmentPlugin from 'vite-plugin-environment'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const apiUrl = process.env.VITE_APP_API_URL || 'http://localhost:5000/api'
+// const apiUrl = process.env.VITE_APP_API_URL || 'http://localhost:5000/api'
 
 export default defineConfig({
   plugins: [
@@ -18,17 +18,53 @@ export default defineConfig({
       workbox: {
         runtimeCaching: [
           {
-            urlPattern: new RegExp(`${apiUrl}/products`),
-            handler: 'StaleWhileRevalidate',
+            // Cache images from the public folder
+            urlPattern: /\/images\/.*\.(?:png|jpg|jpeg|gif|webp|svg)$/,
+            handler: 'CacheFirst',
             options: {
-              cacheName: 'products-cache'
+              cacheName: 'public-images',
+              expiration: {
+                maxEntries: 100, // Limit number of cached images
+                maxAgeSeconds: 60 * 60 * 24 * 30 // Cache for 30 days
+              }
             }
           },
           {
-            urlPattern: new RegExp(`${apiUrl}/categories`),
+            urlPattern: ({ url }) => url.pathname.startsWith('/api/products'),
+            handler: 'NetworkFirst',
+            options: {
+              networkTimeoutSeconds: 10,
+              cacheName: 'products-cache',
+              expiration: {
+                maxEntries: 20
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/api/categories'),
+            handler: 'NetworkFirst',
+            options: {
+              networkTimeoutSeconds: 10,
+              cacheName: 'categories-cache',
+              expiration: {
+                maxEntries: 5
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          {
+            urlPattern: /\.(?:js|css|html)$/,
             handler: 'StaleWhileRevalidate',
             options: {
-              cacheName: 'categories-cache'
+              cacheName: 'static-assets',
+              expiration: {
+                maxEntries: 50
+              }
             }
           }
         ]
