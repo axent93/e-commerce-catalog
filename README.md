@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# E-Commerce Product Catalog with PWA Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is an e-commerce product catalog built with modern web technologies. It includes PWA features for offline support and provides a fast, smooth, and reliable user experience. Users can filter products by categories, view details, and interact with the app even in poor network conditions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+For more details on the concept of the solution, please refer to the [Concept of Solution](./documentation/CONCEPT.md) document.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: For building the user interface.
+- **TypeScript**: Ensures type safety and improves code quality.
+- **Vite**: For fast builds and development environment.
+- **Vite PWA Plugin**: Adds offline capabilities and installable features.
+- **React Query**: For API interaction, caching, and offline sync.
+- **Axios**: For HTTP requests.
+- **ESLint**: For code linting.
+- **Prettier**: For code formatting.
+- **Husky**: For managing Git hooks.
+- **Jest**: For unit testing.
+- **json-server**: Simulates a RESTful API for development.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Make sure you have the following installed:
+
+- Node.js (version 16+ recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+2. Navigate to project:
+   ```bash
+   cd <project_directory>
+3. Install dependencies:
+   ```bash
+   yarn install
+
+### Production
+
+1. Build production:
+   ```bash
+   yarn build
+2. Preview production:
+   ```bash
+   yarn preview
+
+### FAKE API Backend
+
+1. Start fake backend API:
+   ```bash
+   yarn start:json-server
+
+### Development
+
+1. Development mode:
+   ```bash
+   yarn dev
+
+### Testing
+
+1. Development mode:
+   ```bash
+   yarn test
+2. Development mode:
+   ```bash
+   yarn lint
